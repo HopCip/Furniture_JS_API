@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furntiture Shop</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-header">Furniture <span class="colored-span">Shop</span></h1>
+    </header>
+    <!-- navbar start -->
+    <button class="sidebar-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h4 class="sidebar-shop-name">Furniture <span class="colored-span">Shop</span></h4>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+      </div>
+      <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="#products">products</a>
+        </li>
+        <li>
+          <a href="#location">Location</a>
+        </li>
+        <li>
+          <a href="#contact">contact</a>
+        </li>
+      </ul>
+      <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+          <a href="https://www.linkedin.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- navbar end -->
+    <!-- home -->
+    <div class="title">
+      <h2>Home</h2>
+      <div class="title-underline"></div>
+    </div>
+    <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis corrupti sint in rem error suscipit aliquid quidem iste ea neque velit esse aliquam consequatur, incidunt commodi libero fuga voluptas quasi quas reiciendis quaerat vel nemo debitis odio. Placeat eum, inventore laborum adipisci quisquam, a quasi enim vitae voluptates ut ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, cumque. Recusandae consequatur natus nemo eaque minima qui quo ducimus, optio voluptatem distinctio ipsa eius maxime dolores dolor, mollitia illo nesciunt rem? Architecto provident vel, officiis laudantium natus tempora beatae aliquam placeat ducimus eligendi voluptates reprehenderit earum vero fugiat quibusdam temporibus nisi id. Modi optio quasi sed, facilis deserunt accusantium nihil nulla, illum autem est, incidunt atque tenetur placeat? Atque minus cupiditate debitis facilis molestiae quisquam officiis fugit ut aut quis. Praesentium laboriosam accusamus possimus fuga consequatur ullam nulla assumenda, velit dicta? Nemo soluta ullam numquam. Beatae nisi ut aperiam tenetur? Nam quas, odit tempore repudiandae libero provident voluptatem odio reprehenderit culpa ratione excepturi id velit aperiam assumenda minima hic quibusdam adipisci? Tempore maiores, beatae sed totam facere earum minus odit nostrum dolor, veniam ea animi expedita nesciunt eaque autem quis ipsa labore enim neque eveniet et necessitatibus adipisci nobis quas. Suscipit, autem ab nam aperiam dicta nostrum, dignissimos porro repudiandae cum exercitationem ipsa quidem facere quis voluptatem placeat blanditiis maiores. Repellendus consequuntur accusantium consectetur nobis labore temporibus illo perferendis ipsum vitae aperiam veritatis facilis ut expedita, quo sunt non at pariatur unde perspiciatis! Perspiciatis voluptatibus doloremque eos sed consectetur ab!</p>
+    <!-- home end -->
+    <section class="products">
+      <!-- title products -->
+      <div class="title">
+        <h2 id="products">products</h2>
+        <div class="title-underline"></div>
+      </div>
+      <!-- Form Filter -->
+      <form class="input-form">
+        <input type="text" class="search-input" placeholder="Search furniture..." />
+      </form>
+      <!-- products -->
+      <div class="products-center"></div>
+    </section>
+    <!-- Location -->
+    <div class="title" id="location">
+      <h2 id="contact">Location</h2>
+      <div class="title-underline"></div>
+    </div>
+    <section>
+      <div class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d824.1107381930958!2d18.07484209832789!3d48.29430339933815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssk!2ssk!4v1690102992301!5m2!1ssk!2ssk"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- Contact us -->
+    <div class="title">
+      <h2 id="contact">Contact us</h2>
+      <div class="title-underline"></div>
+    </div>
+    <section>
+      <form>
+        <input name="name" type="text" class="feedback-input" placeholder="Name" required/>
+        <input name="email" type="text" class="feedback-input" placeholder="Email" required/>
+        <textarea name="text" class="feedback-input" placeholder="Comment" required></textarea>
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <p>
+        copyright &copy; Furniture Shop s.r.o.
+        <span id="date"></span> all rights reserved
+      </p>
+    </footer>
+    <script src="./app.js"></script>
+    <script src="./sidebar.js"></script>
+  </body>
+</html>
