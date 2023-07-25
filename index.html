@@ -98,9 +98,9 @@
     </div>
     <section>
       <form>
-        <input name="name" type="text" class="feedback-input" placeholder="Name" required/>
+        <input name="name" type="text" class="feedback-input" placeholder="Name" minlength="7" maxlength="30" required/>
         <input name="email" type="text" class="feedback-input" placeholder="Email" required/>
-        <textarea name="text" class="feedback-input" placeholder="Comment" required></textarea>
+        <textarea name="text" class="feedback-input" placeholder="Comment" minlength="20" maxlength="350" required></textarea>
         <input type="submit" value="SUBMIT" />
       </form>
     </section>

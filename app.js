@@ -7,10 +7,6 @@ const fetchProducts = async () => {
   try {
     const resp = await fetch(url)
     const data = await resp.json()
-    // console.log(data)
-    // let pokus = data.forEach((one) => {
-    //   console.log(one.fields.name)
-    // })
     return data
   } catch (error) {
     productsDOM.innerHTML = '<p class="error">there was an error</p>'
@@ -39,23 +35,28 @@ const displayProducts = (list) => {
         </div>`
 }
 
-const start = async () => {
-  const data = await fetchProducts()
-  displayProducts(data)
-}
-
-start()
-
-// Filter
-
 const form = document.querySelector('.input-form')
 const searchInput = document.querySelector('.search-input')
 
-// form.addEventListener('keyup', () => {
-//   const inputValue = searchInput.value
-//   const filteredData = fetchProducts()
-//   filteredData.filter((product) => {
-//     return product.name.toLowerCase().includes(inputValue)
-//   })
-//   displayProducts(data)
-// })
+const start = async () => {
+  const data = await fetchProducts()
+  displayProducts(data)
+
+  form.addEventListener('keyup', () => {
+    const inputValue = searchInput.value
+    let filteredData = { ...data }
+    filteredData = data.filter((product) => {
+      return product.fields.name.toLowerCase().includes(inputValue)
+    })
+    if (filteredData.length < 1) {
+      productsDOM.innerHTML = `
+      <div class="no-match">
+        <h3>no products matched your search, try again please.</h3>
+      </div>`
+      return
+    }
+    displayProducts(filteredData)
+  })
+}
+
+start()
